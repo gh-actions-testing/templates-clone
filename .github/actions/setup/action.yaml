@@ -26,3 +26,8 @@ runs:
     - name: Install dependencies
       run: pnpm install --frozen-lockfile --child-concurrency=10
       shell: bash
+
+    - name: Add PR_ALLOW_PREVIEW
+      shell: bash
+      run: echo PR_ALLOW_PREVIEW=true >> $GITHUB_ENV
+
