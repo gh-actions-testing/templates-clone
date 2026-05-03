@@ -42,6 +42,7 @@ export async function upload(config: UploadConfig) {
 }
 
 async function uploadTemplates(body: FormData, config: UploadConfig) {
+	console.log({ body, config });
 	const queryParams = new URLSearchParams(config.seedRepo);
 	queryParams.set("version", config.version);
 	if (config.latest) {
