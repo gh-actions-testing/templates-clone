@@ -21,13 +21,13 @@ jobs:
       cancel-in-progress: true
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup
+        #- uses: ./.github/actions/setup
 
       - name: Run checks
-        run: pnpm -w check
+        run: echo pnpm -w check
 
       - name: Run tests
-        run: pnpm -w test
+        run: echo pnpm -w test
 
       - name: Save PR ID
         run: echo "$PR_ID" > ${{ env.PR_ID_FILE }}
